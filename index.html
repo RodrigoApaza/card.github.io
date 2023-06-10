@@ -12,24 +12,24 @@
 </head>
 
 <body>
-    <div class="jumbotron">
+    <div class="jumbotron" style="background-color: #c2dc97;">
         <div class="content">
             <div class="row flex-d justify-content-center">
-                <div class="col-6 bg-warning">
-                    <div class="nes-container with-title is-centered">
-                        <p>HOLA ALINA OwO</p>
+                <div class="col-11">
+                    <div class="nes-container with-title is-centered" style="background-color: #f6e488;" >
+                        <h5>HOLA ALINA OwO</h5>
                         <i class="nes-kirby kirby"></i>
-
+                        <br>
                         <div id="texto-oculto" class="oculto">
-                            <p>Hoy es <span id="fecha"></span></p>
+                            <p>Hoy es <span id="fecha"></span> y son las <span id="hora"></span></p>
                             <i class="nes-icon trophy is-large"></i>
-                            <p>Y espero que tengas un hermoso dia</p>
+                            <p>Espero que tengas un hermoso dia</p>
                             <i class="nes-icon is-large star"></i>
                             <p>No olvides brillar, hermoso cocodrilo :3</p>
                             <progress class="nes-progress is-error" id="progreso" value="10" max="100"></progress>
                             <br>
                             <p>Te quiero mucho</p>
-
+                            <h5>ATTE: TU FAN #1 :D</h5>
                         </div>
 
                         <button type="button" class="nes-btn is-success" id="boton">Da Click Acá :3</button>
@@ -41,8 +41,8 @@
                                 <i class="snes-logo"></i>
                                 <i class="snes-jp-logo"></i></span>
                         </div>
-
                     </div>
+                    <p style="text-align: right; color: #72b6c7; font-size: 12px;">Desarrollado por Anibal C. Apaza</p>
                 </div>
             </div>
         </div>
@@ -52,3 +52,11 @@
 </html>
 
 <script src="js/script.js"></script>
+<script>    
+    function generar_hora(){
+        let fecha = new Date();
+        document.getElementById("hora").innerText = fecha.getHours()+":"+fecha.getMinutes()+":"+fecha.getSeconds();
+    }
+
+    setInterval(generar_hora, 1000);
+</script>

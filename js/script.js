@@ -28,7 +28,7 @@ boton.addEventListener('click', function () {
     if (!textoOculto.classList.contains("desoculto")) {
         textoOculto.classList.add('desoculto');
         textoOculto.style.display = "block";
-
+        boton.style.display = "none";
     }
 });
 
